@@ -1,6 +1,11 @@
-source extras/bar.sh
+declare -a depandancies_packages=()
 
-clear
-echo "Preparing Pre-installation materials" 
-git clone "https://github.com/RichardSmith240/CAR-Install.git"
-declare -a dependancies_packges=()
+
+while true ; do
+	echo "Preparing Pre-installation Materials"
+	sleep 2
+	./options/aur.sh
+	./options/fonts.sh
+	./options/browser.sh
+	./options/theme.sh
+done

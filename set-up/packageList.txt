@@ -1,0 +1,17 @@
+fastfetch
+nvim
+nano
+vim
+cmatrix
+asciiquarium
+python3
+network-manager
+bluetooth-manager
+bluez
+pulseaudio
+pulseaudio-bluetooth
+pulseaudio-jack
+pulseaudio-equalizer
+wofi
+hyprland
+
