@@ -8,4 +8,5 @@ while true ; do
 	./options/fonts.sh
 	./options/browser.sh
 	./options/theme.sh
+	./options/audio.sh
 done

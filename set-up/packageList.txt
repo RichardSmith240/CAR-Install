@@ -4,7 +4,6 @@ nano
 vim
 cmatrix
 asciiquarium
-python3
 network-manager
 bluetooth-manager
 bluez
@@ -14,4 +13,8 @@ pulseaudio-jack
 pulseaudio-equalizer
 wofi
 hyprland
+thunar
+yazi
+cbonsai
+firefox
 
