@@ -1,6 +1,5 @@
 declare -a depandancies_packages=()
 
-
 while true ; do
 	echo "Preparing Pre-installation Materials"
 	sleep 2
