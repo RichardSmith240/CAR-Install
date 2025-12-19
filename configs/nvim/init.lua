@@ -1,10 +1,9 @@
 --general
-vim.opt.number = true
-vim.opt.relativenumber = true
+require ("config.general")
 
 --configs
+require("config.keybinds")
 require ("config.lazy")
-require ("config.keybinds")
 
 --plugins
 require ("plugins.mason")
@@ -12,3 +11,6 @@ require ("plugins.lualine")
 require ("plugins.telescope")
 require ("plugins.treesitter")
 require ("plugins.diffview")
+require ("plugins.blink")
+
+--appearance

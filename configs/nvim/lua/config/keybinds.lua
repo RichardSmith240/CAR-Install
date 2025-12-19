@@ -5,6 +5,7 @@
 
 
 --general
+vim.g.mapleader = "<Space>"
 vim.keymap.set('n', '<c-t>', ':tabnew')
 
 --plugin specific
