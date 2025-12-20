@@ -125,4 +125,84 @@ These bindings are designed around fast keyboard-driven navigation and minimal m
 | `󰃞 +` | Increase brightness |
 | `󰃞 -` | Decrease brightness |
 
+## Yazi (Terminal File Manager)
+*Keyboard-driven file navigation and manipulation.*
 
+These bindings mirror Vim-style motions and provide a fast, modal workflow for managing files entirely from the keyboard.
+
+### Core Controls
+| Keybind | Action | Reason |
+|--------|--------|--------|
+| `Esc / Ctrl-[` | Escape / cancel | Exit modes, clear selections, or cancel prompts |
+| `q` | Quit | Exit Yazi cleanly |
+| `Ctrl-c` | Close tab / quit | Safe abort depending on context |
+
+---
+
+### Navigation
+| Keybind | Action | Reason |
+|--------|--------|--------|
+| `j / k` | Next / previous file | Vim-style vertical navigation |
+| `h / l` | Parent / enter directory | Directory traversal |
+| `H / L` | Back / forward | History-based navigation |
+| `gg / G` | Top / bottom | Fast jumps in large directories |
+| `Ctrl-u / Ctrl-d` | Half-page up / down | Efficient long-list movement |
+
+---
+
+### Selection & Visual Mode
+| Keybind | Action | Reason |
+|--------|--------|--------|
+| `Space` | Toggle selection | Select files incrementally |
+| `v / V` | Visual modes | Enter selection modes |
+| `Ctrl-a` | Select all | Bulk operations |
+| `Ctrl-r` | Invert selection | Quickly refine selections |
+
+---
+
+### File Operations
+| Keybind | Action | Reason |
+|--------|--------|--------|
+| `o / Enter` | Open | Open selected file(s) |
+| `y / x` | Copy / cut | Yank-style file operations |
+| `p / P` | Paste / force paste | Move or duplicate files |
+| `d / D` | Trash / delete permanently | Safe vs destructive delete |
+| `a` | Create file/dir | Quick file creation |
+| `r` | Rename | Inline renaming |
+| `.` | Toggle hidden files | Visibility control |
+
+---
+
+### Search, Filter & Jump
+| Keybind | Action | Reason |
+|--------|--------|--------|
+| `s / S` | Search by name / content | Fast file discovery |
+| `z / Z` | FZF / Zoxide | Jump to files or directories |
+| `/ / ?` | Find next / previous | In-list searching |
+
+---
+
+### Tabs & Workspaces
+| Keybind | Action | Reason |
+|--------|--------|--------|
+| `t` | New tab | Parallel directory views |
+| `1–9` | Switch tabs | Direct tab access |
+| `[ / ]` | Prev / next tab | Sequential navigation |
+
+---
+
+### Sorting & View Modes
+| Keybind | Action | Reason |
+|--------|--------|--------|
+| `,m / ,M` | Sort by modified time | Common file sorting |
+| `,s / ,S` | Sort by size | Disk usage inspection |
+| `,a / ,A` | Alphabetical sort | Default ordering |
+| `ms / mm / mn` | Linemodes | Change file metadata display |
+
+---
+
+### Help & Utilities
+| Keybind | Action | Reason |
+|--------|--------|--------|
+| `~ / F1` | Help | Built-in key reference |
+| `w` | Task manager | Monitor background tasks |

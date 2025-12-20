@@ -18,6 +18,8 @@ return {
 				},
 				markdown_oxide = {},
 				jdtls = {},
+				tombi = {},
+				bashls = {},
 			},
 		},
 		config = function(_, opts)
@@ -27,7 +29,9 @@ return {
 				ensure_installed = {
 					"lua_ls",
 					"markdown_oxide",
-					"jdtls"
+					"jdtls",
+					"bashls",
+					"tombi"
 				}
 			})
 
