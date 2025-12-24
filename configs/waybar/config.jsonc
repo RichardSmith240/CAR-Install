@@ -1,41 +1,32 @@
-{
+[{
 	"include": ["module-configs/*.jsonc"],
 
 	//location 
-   "layer": "top", // Waybar at top layer
-   "position": "top", // Waybar position (top|bottom|left|right)
-   
+	"layer": "top",
+	"output": "eDP-1",
+	"position": "top", 
+	
 	//size
-   "height": 30,
-   "spacing": 4, // Gaps between modules (4px)
-   
-   //module locations
-   "modules-left": [
-       "workspaces",
-       "media"
-   ],
-   "modules-center": [
-       "window"
-   ],
-   "modules-right": [
-       "mpd",
-       "idle",
-       "network",
-       "keyboard",
-       "battery",
-       "clock",
-       "tray",
-       "menu-power"
-   ],
-
-   // modules definitions 
-  	"workspaces": ["workspaces.jsonc"],
-  	"keyboard": ["keyboard.jsonc"],
-   "mpd": ["mpd.jsonc"],
-   "idle": ["idle.jsonc"],
-   "tray": ["tray.jsonc"],
-   "computer": ["computer.jsonc"],
-   "battery": ["power.jsonc"], 
-   "network": ["network.jsonc"],
-	"power-menu": ["menu.jsonc"]
-}
+	//"height": 40,
+	"spacing": 4, // Gaps between modules (4px)
+	
+	//module locations
+	"modules-left": [
+		 "hyprland/workspaces",
+		 "pulseaudio"
+	],
+	"modules-center": [
+	],
+	"modules-right": [
+		 "mpd",
+		 "idle",
+		 "network",
+		 "keyboard-state",
+		 "battery",
+		 "clock",
+		 "cpu",
+		 "memory",
+		 "tray",
+		 "menu-power"
+	]
+}]
