@@ -20,6 +20,9 @@ return {
 				jdtls = {},
 				tombi = {},
 				bashls = {},
+				jsonls = {},
+				pyright = {},
+				ts_ls = {},
 			},
 		},
 		config = function(_, opts)
@@ -31,7 +34,6 @@ return {
 					"markdown_oxide",
 					"jdtls",
 					"bashls",
-					"tombi"
 				}
 			})
 

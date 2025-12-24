@@ -48,4 +48,5 @@ vim.diagnostic.config({
 --other
 vim.o.clipboard = "unnamedplus" --clipboard
 vim.o.updatetime = 500
+vim.opt.timeoutlen = 1500
 vim.opt.mouse = ""
