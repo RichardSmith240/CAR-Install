@@ -1,0 +1,26 @@
+/* 
+ * AUTO-GENERATED FROM active-palette.toml
+ * DO NOT EDIT BY HAND
+ */
+
+:root {
+  /* Base */
+  --bg: #1b0126;
+  --fg: #ce84fd;
+
+  /* Surface */
+  --surface0: #12001a;
+  --surface1: #1f022b;
+  --surface2: #2b033c;
+
+  /* Accent */
+  --accent-primary:   #9753ad;
+  --accent-secondary: #7d48b4;
+  --accent-tertiary:  #5a2d82;
+
+  /* State */
+  --state-success: #5fb3a2;
+  --state-warning: #ffd580;
+  --state-error:   #ff6b6b;
+}
+

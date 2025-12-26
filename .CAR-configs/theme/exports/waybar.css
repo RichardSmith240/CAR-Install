@@ -1,0 +1,27 @@
+/*  @define-color colorname #RRGGBB; */
+
+@import url("../active-palette.css");
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 12px;
+  border: none;
+}
+
+window#waybar {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+#workspaces button {
+  color: var(--surface2);
+}
+
+#workspaces button.focused {
+  color: var(--accent-primary);
+}
+
+#clock {
+  color: var(--accent-secondary);
+}
+

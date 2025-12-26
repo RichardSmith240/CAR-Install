@@ -1,0 +1,34 @@
+[colors.primary]
+background = "#3e1c57"   # lifted from near-black to deep purple
+foreground = "#e9dff2"   # lightest palette color
+
+[colors.cursor]
+text   = "#1b0126"
+cursor = "#ce84fd"
+
+[colors.selection]
+text       = "#1b0126"
+background = "#b7a6cc"
+
+[colors.normal]
+black   = "#1b0126"  
+red     = "#c94a4a"  
+green   = "#7fb448"  
+yellow  = "#e0a43a"  
+blue    = "#7d48b4"  
+magenta = "#ce84fd"  
+cyan    = "#9a7fae"  
+white   = "#d8c9ea"  
+
+[colors.bright]
+black   = "#5a2d82"  
+red     = "#c94a4a"
+green   = "#7fb448"
+yellow  = "#e0a43a"
+blue    = "#9753ad"  
+magenta = "#e3a6d8"  
+cyan    = "#e9dff2"  
+white   = "#e9dff2"
+
+[window]
+opacity = 0.8

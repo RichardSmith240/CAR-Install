@@ -1,121 +1,101 @@
-local colors = {
-  color1  = '#E9DFF2', -- text_dark
-  color2  = '#1B0126', -- text_light
+local scheme = require("theme.active-palette")
+local p = scheme.palette
 
-  color3  = '#462859', -- lang_bg
-  color4  = '#4B2F73', -- git_bg
-  color5  = '#C291F2', -- file_bg
-  color6  = '#2B1E33', -- fill_bg
+local b  = p.base
+local sf = p.surface
+local a  = p.accent
+local st = p.state
+local sm = p.semantic
 
-  color7  = '#79D542', -- add_fg
-  color8  = '#E6B040', -- warn_fg
-  color9  = '#D9435F', -- err_fg
-}
-
--- theme
-local bubbles_theme = {
+local theme = {
   normal = {
-    a = { fg = colors.color2, bg = colors.color5 },
-    b = { fg = colors.color1, bg = colors.color6 },
-    c = { fg = colors.color1, bg = colors.color6 },
+    a = { fg = b.background, bg = a.tertiary },
+    b = { fg = b.foreground, bg = sf.surface0 },
+    c = { fg = b.foreground, bg = sf.surface0 },
   },
-  insert  = { a = { fg = colors.color2, bg = colors.color5 } },
-  visual  = { a = { fg = colors.color2, bg = colors.color5 } },
-  replace = { a = { fg = colors.color2, bg = colors.color5 } },
+  insert  = { a = { fg = b.background, bg = a.primary } },
+  visual  = { a = { fg = b.background, bg = a.secondary } },
+  replace = { a = { fg = b.background, bg = sm.error } },
   inactive = {
-    a = { fg = colors.color1, bg = colors.color6 },
-    b = { fg = colors.color1, bg = colors.color6 },
-    c = { fg = colors.color1, bg = colors.color6 },
+    a = { fg = st.inactive, bg = sf.surface0 },
+    b = { fg = st.inactive, bg = sf.surface0 },
+    c = { fg = st.inactive, bg = sf.surface0 },
   },
 }
 
-require('lualine').setup {
+require("lualine").setup({
   options = {
-    theme = bubbles_theme,
-    component_separators = '',
-    section_separators = '', 
+    theme = theme,
+    component_separators = "",
+    section_separators = "",
   },
 
   sections = {
     lualine_a = {
-      { ' ', color = { bg = colors.color6 }, right_padding = 1 },
+      { " ", color = { bg = sf.surface0 }, right_padding = 1 },
 
-      -- filename
-      { 'filename', color = { fg = colors.color2, bg = colors.color5 } },
+      { "filename", color = { fg = b.background, bg = a.tertiary } },
 
-      -- line / total
       {
         function()
-          return vim.fn.line('.') .. ' / ' .. vim.fn.line('$')
+          return vim.fn.line(".") .. " / " .. vim.fn.line("$")
         end,
-        color = { fg = colors.color2, bg = colors.color5 },
+        color = { fg = b.background, bg = a.tertiary },
         left_padding = 1,
       },
     },
 
     lualine_b = {
-      -- center fill
-      { '%=', color = { bg = colors.color6 } },
+      { "%=", color = { bg = sf.surface0 } },
     },
 
     lualine_c = {
-      -- language / filetype
-      { 'filetype', icon = true, color = { fg = colors.color1, bg = colors.color3 } },
+      { "filetype", icon = true, color = { fg = b.foreground, bg = a.secondary } },
     },
 
     lualine_x = {
-      -- additions
       {
-        'diagnostics',
-        sources = { 'nvim_diagnostic' },
-        sections = { 'info' },
-        symbols = { info = '+ ' },
-        color = { fg = colors.color7, bg = colors.color6 },
+        "diagnostics",
+        sources = { "nvim_diagnostic" },
+        sections = { "info" },
+        symbols = { info = "+ " },
+        color = { fg = sm.info, bg = sf.surface0 },
       },
-      -- warnings
       {
-        'diagnostics',
-        sources = { 'nvim_diagnostic' },
-        sections = { 'warn' },
-        symbols = { warn = '?! ' },
-        color = { fg = colors.color8, bg = colors.color6 },
+        "diagnostics",
+        sources = { "nvim_diagnostic" },
+        sections = { "warn" },
+        symbols = { warn = "?! " },
+        color = { fg = sm.warning, bg = sf.surface0 },
       },
-      -- errors
       {
-        'diagnostics',
-        sources = { 'nvim_diagnostic' },
-        sections = { 'error' },
-        symbols = { error = ' ' },
-        color = { fg = colors.color9, bg = colors.color6 },
+        "diagnostics",
+        sources = { "nvim_diagnostic" },
+        sections = { "error" },
+        symbols = { error = " " },
+        color = { fg = sm.error, bg = sf.surface0 },
       },
     },
 
     lualine_y = {
-      -- git
-      { 'branch', icon = '', color = { fg = colors.color1, bg = colors.color4 } },
+      { "branch", icon = "", color = { fg = b.foreground, bg = a.primary } },
     },
 
     lualine_z = {
-      -- right fill
-      { '%=', color = { bg = colors.color6 } },
+      { "%=", color = { bg = sf.surface0 } },
 
-      -- linux icon
-      { function() return '' end, color = { fg = colors.color1, bg = colors.color6 } },
-
-      -- neovim icon
-      { function() return '' end, color = { fg = colors.color1, bg = colors.color6 } },
+      { function() return "" end, color = { fg = b.foreground, bg = sf.surface0 } },
+      { function() return "" end, color = { fg = b.foreground, bg = sf.surface0 } },
     },
   },
 
   inactive_sections = {
-    lualine_a = { 'filename' },
+    lualine_a = { "filename" },
     lualine_b = {},
     lualine_c = {},
     lualine_x = {},
     lualine_y = {},
-    lualine_z = { 'location' },
+    lualine_z = { "location" },
   },
+})
 
-  tabline = {},
-  extensions = {},
-}

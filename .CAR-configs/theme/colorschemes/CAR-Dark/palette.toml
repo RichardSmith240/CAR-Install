@@ -1,0 +1,25 @@
+[base]
+background = "#3e1c57"
+foreground = "#f6f1fb"   # very light lavender-white
+secondary  = "#e3d9f0"   # clear but softer than foreground
+
+[surface]
+surface0 = "#3e1c57"
+surface1 = "#4a246c"
+surface2 = "#5a2d82"
+
+[accent]
+primary   = "#b67ad1"    # slightly brighter for visibility
+secondary = "#9a66c8"
+tertiary  = "#6b3b95"
+
+[state]
+active   = "#d6c9e8"
+inactive = "#8a7a9e"
+
+[semantic]
+addition = "#8fd05a"
+warning  = "#f0b84a"
+error    = "#e06c6c"
+info     = "#f0b8e6"
+

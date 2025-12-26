@@ -1,0 +1,11 @@
+import = ["~/.CAR-configs/theme/active-palette.toml"]
+
+[manager]
+cwd = { fg = "$accent.primary" }
+hovered = { fg = "$base.bg", bg = "$accent.primary" }
+
+[status]
+separator_open  = ""
+separator_close = ""
+mode_normal = { fg = "$base.bg", bg = "$accent.secondary" }
+

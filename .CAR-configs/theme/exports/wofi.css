@@ -1,0 +1,17 @@
+@import url("../active-palette.css");
+
+window {
+  background-color: var(--bg);
+  border: 2px solid var(--accent-primary);
+}
+
+#input {
+  background-color: var(--surface1);
+  color: var(--fg);
+}
+
+#entry:selected {
+  background-color: var(--accent-primary);
+  color: var(--bg);
+}
+
