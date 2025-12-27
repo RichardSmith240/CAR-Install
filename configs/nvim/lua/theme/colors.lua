@@ -1,5 +1,7 @@
 local M = {}
 
+local scheme = require("theme.colorschemes.CAR").get()
+
 local function set(group, opts)
   vim.api.nvim_set_hl(0, group, opts)
 end
@@ -9,7 +11,6 @@ function M.setup()
   vim.cmd("syntax reset")
   vim.o.termguicolors = true
 
-  	local scheme = require("theme.active-palette")
  	local b = scheme.palette.base
 	local sf = scheme.palette.surface
 	local st = scheme.palette.state
@@ -57,7 +58,7 @@ function M.setup()
   set("DiffChange", { fg = sm.warning })
   set("DiffText",   { fg = sm.info })
 
-  -- Treesitter
+  -- TreeSitter
   vim.cmd([[
 	  hi link @comment Comment
 	  hi link @string String
@@ -70,3 +71,4 @@ function M.setup()
 end
 
 return M
+

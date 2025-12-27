@@ -1,2 +1,166 @@
-@import "colors.css";
+* {
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 13px;
+  border: none;
+  min-height: 0;
+  background: transparent;
+}
+
+window#waybar {
+  background: transparent;
+  color: #E9DFF2;
+  margin-right: 5px;
+}
+
+window#waybar > box {
+  background: transparent;
+}
+
+.module {
+  background-color: rgba(36, 16, 51, 0.72);
+  padding: 4px 10px;
+  margin: 4px 2px;
+  border-radius: 10px;
+  color: #E9DFF2;
+  border: 1px solid rgba(125, 106, 156, 0.6);
+}
+
+.module:hover {
+  background-color: rgba(47, 24, 66, 0.85);
+  border-color: rgba(125, 106, 156, 0.8);
+}
+
+#workspaces {
+  background: transparent;
+  margin-left: 6px;
+}
+
+#workspaces button {
+  background-color: rgba(36, 16, 51, 0.55);
+  color: #7D6A9C;
+  padding: 4px 8px;
+  margin: 2px;
+  border-radius: 8px;
+  border: 1px solid rgba(125, 106, 156, 0.6);
+}
+
+#workspaces button.active {
+  background-color: rgba(36, 16, 51, 0.85);
+  color: #CE84FD;
+  border-color: rgba(125, 106, 156, 0.8);
+}
+
+#workspaces button.urgent {
+  background-color: rgba(201, 74, 74, 0.9);
+  color: #1B0126;
+  border-color: rgba(201, 74, 74, 0.9);
+}
+
+#workspaces button:hover {
+  background-color: rgba(47, 24, 66, 0.9);
+  color: #E8A2D5;
+}
+
+#pulseaudio {
+  color: #E9DFF2;
+}
+
+#pulseaudio.muted {
+  color: #7D6A9C;
+}
+
+#mpd {
+  color: #E8A2D5;
+}
+
+#mpd.paused,
+#mpd.stopped {
+  color: #7D6A9C;
+}
+
+#idle {
+  color: #9A84B8;
+}
+
+#network {
+  color: #E9DFF2;
+}
+
+#network.disconnected {
+  color: #C94A4A;
+}
+
+#keyboard-state {
+  color: #9A84B8;
+}
+
+#keyboard-state label.locked {
+  color: #E8A2D5;
+}
+
+#battery {
+  color: #E9DFF2;
+}
+
+#battery.warning {
+  color: #E9DFF2;
+}
+
+#battery.critical {
+  color: #C94A4A;
+}
+
+#battery.charging {
+  color: #E9DFF2;
+}
+
+#clock {
+  color: #CE84FD;
+  font-weight: 500;
+}
+
+#cpu {
+  color: #9A84B8;
+}
+
+#cpu.warning {
+  color: #E9DFF2;
+}
+
+#memory {
+  color: #E8A2D5;
+}
+
+#tray {
+  padding: 4px 8px;
+  background: transparent;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  background-color: rgba(201, 74, 74, 0.85);
+  border-radius: 6px;
+  border: 1px solid rgba(201, 74, 74, 0.9);
+}
+
+#menu-power {
+  color: #E8A2D5;
+}
+
+#menu-power:hover {
+  background-color: rgba(201, 74, 74, 0.9);
+  color: #1B0126;
+  border-color: rgba(201, 74, 74, 0.9);
+}
+
+#modules-right {
+  padding-right: 5px;
+}
+
+#modules-left {
+  padding-right: 5px;
+}
 

@@ -1,11 +1,10 @@
-local scheme = require("theme.active-palette")
-local p = scheme.palette
+local scheme = require("theme.colorschemes.CAR").get()
 
-local b  = p.base
-local sf = p.surface
-local a  = p.accent
-local st = p.state
-local sm = p.semantic
+local b  = scheme.palette.base
+local sf = scheme.palette.surface
+local a  = scheme.palette.accent
+local st = scheme.palette.state
+local sm = scheme.palette.semantic
 
 local theme = {
   normal = {

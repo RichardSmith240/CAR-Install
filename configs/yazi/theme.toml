@@ -1,1 +1,41 @@
-/home/ricky/.CAR-configs/theme/CAR/exports/yazi.toml
+[mgr]
+cwd = { fg = "#CE84FD" }
+hovered = { bg = "#2F1842", fg = "#E9DFF2" }
+preview_hovered = { bg = "#241033" }
+
+[status]
+separator_open  = ""
+separator_close = ""
+
+[status.normal]
+bg = "#241033"
+fg = "#E9DFF2"
+
+[status.inactive]
+bg = "#1B0126"
+fg = "#7D6A9C"
+
+[status.error]
+bg = "#1B0126"
+fg = "#C94A4A"
+
+[status.warning]
+bg = "#1B0126"
+fg = "#E0A43A"
+
+[filetype]
+rules = [
+  { name = "*/", fg = "#CE84FD" },
+  { name = "*.lua", fg = "#7D48B4" },
+  { name = "*.md", fg = "#E8A2D5" },
+]
+
+[selection]
+fg = "#E9DFF2"
+bg = "#2F1842"
+
+[marker]
+select = { fg = "#7FB448" }
+cut    = { fg = "#C94A4A" }
+copy   = { fg = "#E0A43A" }
+
