@@ -1,0 +1,164 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](fg:surface0)\
+$os\
+$username\
+[](fg:surface0 bg:surface1)\
+$directory\
+[](fg:surface1 bg:accent_secondary)\
+$git_branch\
+$git_status\
+[](fg:accent_secondary bg:accent_primary)\
+$c\
+$cpp\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$haskell\
+$python\
+[](fg:accent_primary bg:accent_tertiary)\
+$docker_context\
+$conda\
+$pixi\
+[](fg:accent_tertiary bg:background)\
+$time\
+[ ](fg:background)\
+$line_break$character
+"""
+
+palette = "car_purple"
+
+[palettes.car_purple]
+background = "#1B0126"
+foreground = "#E9DFF2"
+
+surface0 = "#241033"
+surface1 = "#2F1842"
+
+accent_secondary = "#9A84B8"
+accent_primary   = "#CE84FD"
+accent_tertiary  = "#E8A2D5"
+
+semantic_error    = "#C94A4A"
+semantic_warning  = "#E0A43A"
+semantic_info     = "#7D48B4"
+semantic_addition = "#7FB448"
+
+# ───────── OS ─────────
+[os]
+disabled = false
+style = "bg:surface0 fg:foreground"
+
+[os.symbols]
+Arch = "󰣇"
+Linux = "󰌽"
+
+# ───────── USER ─────────
+[username]
+show_always = true
+style_user = "bg:surface0 fg:foreground"
+style_root = "bg:surface0 fg:foreground"
+format = "[ $user ]($style)"
+
+# ───────── DIRECTORY ─────────
+[directory]
+style = "bg:surface1 fg:foreground"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# ───────── GIT ─────────
+[git_branch]
+symbol = ""
+style = "bg:accent_secondary"
+format = "[[ $symbol $branch ](fg:foreground bg:accent_secondary)]($style)"
+
+[git_status]
+style = "bg:accent_secondary"
+format = "[[ $all_status$ahead_behind ](fg:foreground bg:accent_secondary)]($style)"
+
+# ───────── LANGUAGES ─────────
+[nodejs]
+symbol = ""
+style = "bg:accent_primary"
+format = "[[ $symbol $version ](fg:foreground bg:accent_primary)]($style)"
+
+[c]
+symbol = ""
+style = "bg:accent_primary"
+format = "[[ $symbol $version ](fg:foreground bg:accent_primary)]($style)"
+
+[cpp]
+symbol = ""
+style = "bg:accent_primary"
+format = "[[ $symbol $version ](fg:foreground bg:accent_primary)]($style)"
+
+[rust]
+symbol = ""
+style = "bg:accent_primary"
+format = "[[ $symbol $version ](fg:foreground bg:accent_primary)]($style)"
+
+[golang]
+symbol = ""
+style = "bg:accent_primary"
+format = "[[ $symbol $version ](fg:foreground bg:accent_primary)]($style)"
+
+[php]
+symbol = ""
+style = "bg:accent_primary"
+format = "[[ $symbol $version ](fg:foreground bg:accent_primary)]($style)"
+
+[java]
+symbol = ""
+style = "bg:accent_primary"
+format = "[[ $symbol $version ](fg:foreground bg:accent_primary)]($style)"
+
+[kotlin]
+symbol = ""
+style = "bg:accent_primary"
+format = "[[ $symbol $version ](fg:foreground bg:accent_primary)]($style)"
+
+[haskell]
+symbol = ""
+style = "bg:accent_primary"
+format = "[[ $symbol $version ](fg:foreground bg:accent_primary)]($style)"
+
+[python]
+symbol = ""
+style = "bg:accent_primary"
+format = "[[ $symbol $version ](fg:foreground bg:accent_primary)]($style)"
+
+# ───────── CONTAINERS / ENV ─────────
+[docker_context]
+symbol = ""
+style = "bg:accent_tertiary"
+format = "[[ $symbol $context ](fg:foreground bg:accent_tertiary)]($style)"
+
+[conda]
+style = "bg:accent_tertiary"
+format = "[[ $symbol $environment ](fg:foreground bg:accent_tertiary)]($style)"
+
+[pixi]
+style = "bg:accent_tertiary"
+format = "[[ $symbol $version $environment ](fg:foreground bg:accent_tertiary)]($style)"
+
+# ───────── TIME ─────────
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:background"
+format = "[[  $time ](fg:foreground bg:background)]($style)"
+
+# ───────── PROMPT ─────────
+[character]
+success_symbol = "[](bold fg:accent_primary)"
+error_symbol   = "[](bold fg:semantic_error)"
+vimcmd_symbol  = "[](bold fg:accent_primary)"
+vimcmd_replace_one_symbol = "[](bold fg:accent_secondary)"
+vimcmd_replace_symbol     = "[](bold fg:accent_secondary)"
+vimcmd_visual_symbol      = "[](bold fg:accent_tertiary)"
+

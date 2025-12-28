@@ -1,32 +1,30 @@
 [{
 	"include": ["module-configs/*.jsonc"],
-
 	//location 
 	"layer": "top",
 	"output": "eDP-1",
 	"position": "top", 
+	"tooltip": true,
 	
 	//size
-	//"height": 40,
 	"spacing": 4, // Gaps between modules (4px)
 	
 	//module locations
 	"modules-left": [
-		 "hyprland/workspaces",
-		 "pulseaudio"
+	  "hyprland/workspaces",
+	  "pulseaudio",
+	  "backlight"
 	],
+
 	"modules-center": [
+	  "network",
+	  "bluetooth"
 	],
+
 	"modules-right": [
-		 "mpd",
-		 "idle",
-		 "network",
-		 "keyboard-state",
-		 "battery",
-		 "clock",
-		 "cpu",
-		 "memory",
-		 "tray",
-		 "menu-power"
+	  "cpu",
+	  "battery",
+	  "clock"
 	]
+
 }]

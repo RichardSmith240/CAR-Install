@@ -156,6 +156,17 @@ window#waybar > box {
   border-color: rgba(201, 74, 74, 0.9);
 }
 
+#date {
+  padding: 0 10px;
+  margin: 0 2px;
+  border-radius: 10px;
+
+  background: rgba(25, 22, 32, 0.55);
+  border: 1px solid rgba(180, 170, 200, 0.45);
+
+  color: inherit;
+}
+
 #modules-right {
   padding-right: 5px;
 }

@@ -1,5 +1,5 @@
 {
-	"menu-power": {
+	"custom/menu-power": {
 		"format" : "⏻ ",
 		"tooltip": false,
 		"menu": "on-click",
