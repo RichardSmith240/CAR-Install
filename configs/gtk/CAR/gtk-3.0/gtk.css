@@ -1,10 +1,3 @@
-/* =========================================================
- * CAR GTK THEME — GTK 3
- * Variant: Purple
- * ========================================================= */
-
-/* ---------------- COLORS ---------------- */
-
 @define-color bg_color       rgba(27, 1, 38, 0.50);
 @define-color fg_color       #E9DFF2;
 
@@ -22,7 +15,7 @@
 @define-color warning_color  #E0A43A;
 @define-color success_color  #7FB448;
 
-/* ---------------- WINDOWS ---------------- */
+/* window */
 
 window {
   background-color: @bg_color;
@@ -35,7 +28,7 @@ headerbar {
   box-shadow: none;
 }
 
-/* ---------------- NOTEBOOK / TABS ---------------- */
+/* notebooks and tabs */
 
 notebook > header {
   background: transparent;
@@ -60,7 +53,7 @@ notebook tab:checked {
   color: @selected_fg_color;
 }
 
-/* ---------------- LIBREOFFICE ---------------- */
+/* libre-office */
 
 window.soffice {
   background-color: @bg_color;
@@ -80,9 +73,7 @@ window.soffice button:hover {
   background-color: alpha(@accent_color, 0.15);
 }
 
-/* ============================= */
-/* SLIDERS / VOLUME BARS (GTK3) */
-/* ============================= */
+/* sliders */
 
 scale {
   padding: 6px;
