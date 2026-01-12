@@ -57,9 +57,10 @@ while true ; do
 				## mkdir DOTS
 				## cd DOTS
 				## git clone {repo link}
-				./set-up/preinstallation.sh
-				./set-up/installation.sh
-				./set-up/post-installation.sh
+				cd set-up
+				./preinstallation.sh
+				./installation.sh
+				./post-installation.sh
 			fi
 			exit 0
 			;;
