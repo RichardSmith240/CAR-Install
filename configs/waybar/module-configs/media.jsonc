@@ -1,33 +1,32 @@
 {
-	"pulseaudio": {
-		 // "scroll-step": 1, // %, can be a float
-		 "format": "{volume}% {icon} {format_source}",
-		 "format-bluetooth": "{volume}% {icon} {format_source}",
-		 "format-bluetooth-muted": " {icon} {format_source}",
-		 "format-muted": " {format_source}",
-		 "format-source": "{volume}% ",
-		 "format-source-muted": "",
-		 "format-icons": {
-			"headphone": "",
-			"hands-free": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
-			"default": ["", "", ""]
-		 },
-		 "on-click": "pavucontrol"
-	},
 	"custom/media": {
-		 "format": "{icon} {text}",
-		 "return-type": "json",
+		 
+		"return-type": "json",
 		 "max-length": 40,
 		 "format-icons": {
 			"spotify": "",
 			"default": "🎜"
 		 },
-		 "escape": true,
-		 "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" 
+		 "escape": true
+		 //"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" 
 		 // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+	},
+	"pulseaudio": {
+	  "scroll-step": 5,
+	  "on-click": "pavucontrol",
+
+	  "format": "{icon} {volume}%",
+	  "format-muted": " muted",
+
+	  "format-icons": {
+		 "muted": "",
+		 "default": [
+			"",
+			"",
+			"",
+			""
+		 ]
+	  }
 	}
+
 }

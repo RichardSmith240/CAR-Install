@@ -1,5 +1,5 @@
 * {
-  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-family: "JetBrainsMono Nerd Font", monospace;
   font-size: 13px;
   border: none;
   min-height: 0;
@@ -62,7 +62,9 @@ window#waybar > box {
 }
 
 #pulseaudio {
+  font-family: "JetBrainsMono Nerd Font Mono";
   color: #E9DFF2;
+  min-width: 1.2em;
 }
 
 #pulseaudio.muted {
@@ -99,7 +101,9 @@ window#waybar > box {
 }
 
 #battery {
+  font-family: "JetBrainsMono Nerd Font", monospace;
   color: #E9DFF2;
+  min-width: 1.2em;
 }
 
 #battery.warning {
@@ -107,7 +111,7 @@ window#waybar > box {
 }
 
 #battery.critical {
-  color: #C94A4A;
+  color: #FF5C57;
 }
 
 #battery.charging {
@@ -160,10 +164,8 @@ window#waybar > box {
   padding: 0 10px;
   margin: 0 2px;
   border-radius: 10px;
-
   background: rgba(25, 22, 32, 0.55);
   border: 1px solid rgba(180, 170, 200, 0.45);
-
   color: inherit;
 }
 

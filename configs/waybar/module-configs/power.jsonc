@@ -1,18 +1,28 @@
 {
 	"battery": {
-		 "states": {
-			// "good": 95,
-			"warning": 30,
-			"critical": 15
-		 },
-		 "format": "{capacity}% {icon}",
-		 "format-full": "{capacity}% {icon}",
-		 "format-charging": "{capacity}% ",
-		 "format-plugged": "{capacity}% ",
-		 "format-alt": "{time} {icon}",
-		 // "format-good": "", // An empty format will hide the module
-		 // "format-full": "",
-		 "format-icons": ["", "", "", "", ""]
+	  "interval": 60,
+	  "states": {
+		 "critical": 10,
+		 "warning": 20,
+		 "low": 30,
+		 "full": 95
+	  },
+
+	  "format": "<span font='JetBrainsMono Nerd Font'>{icon}</span> {capacity}%",
+	  "format-charging": "<span font='JetBrainsMono Nerd Font Mono'>󰂄</span> {capacity}%",
+	  "format-plugged": "<span font='JetBrainsMono Nerd Font Mono'>󰚥</span> {capacity}%",
+	  "format-full": "<span font='JetBrainsMono Nerd Font Mono'>󰁹</span>",
+
+	  "format-icons": {
+		 "empty": "󰁺",
+		 "critical": "󰁻",
+		 "low": "󰁼",
+		 "warning": "󰁾",
+		 "default": "󰁽",
+		 "charging": "󰂄",
+		 "plugged": "󰚥",
+		 "full": "󰁹"
+	  }
 	},
 	"power-profiles-daemon": {
 	  "format": "{icon}",
