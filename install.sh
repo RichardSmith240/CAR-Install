@@ -1,45 +1,50 @@
 clear
-echo "          _____                   _____                   _____           "
-echo "         /\    \                 /\    \                 /\    \          "
-echo "        /%%\    \               /@@\    \               /##\    \         "
-echo "       /%%%%\    \             /@@@@\    \             /####\    \        "
-echo "      /%%%%%%\    \           /@@@@@@\    \           /######\    \       "
-echo "     /%%%/\%%%\    \         /@@@/\@@@\    \         /###/\###\    \      "
-echo "    /%%%/  \%%%\    \       /@@@/__\@@@\    \       /###/__\###\    \     "
-echo "   /%%%/    \%%%\    \     /@@@@\   \@@@\    \     /####\   \###\    \    "
-echo "  /%%%/    / \%%%\    \   /@@@@@@\   \@@@\    \   /######\   \###\    \   "
-echo " /%%%/    /   \%%%\    \ /@@@/\@@@\   \@@@\    \ /###/\###\   \###\    \  "
-echo "/%%%/____/     \%%%\____\@@@/  \@@@\   \@@@\____\###/  \###\   \###\____\ "
-echo "\%%%\    \      \%%/    /@@/    \@@@\  /@@@/    /##/   |####\  /###/    / "
-echo " \%%%\    \      \/____/ \/____/ \@@@\/@@@/    / \/____|#####\/###/    /  "
-echo "  \%%%\    \                      \@@@@@@/    /        |#########/    /   "
-echo "   \%%%\    \                      \@@@@/    /         |##|\####/    /    "
-echo "    \%%%\    \                     /@@@/    /          |##| \##/    /     "
-echo "     \%%%\    \                   /@@@/    /           |##|  \/____/	    "
-echo "      \%%%\    \                 /@@@/    /            |##|   |           "
-echo "       \%%%\____\               /@@@/    /             \##|   |           "
-echo "        \%%/    /               \@@/    /               \#|   |           "
-echo "         \/____/                 \/____/                 \|___|           "
-echo ""
-echo ""
-echo "Welcome to Caeli's Automatic Rice Installer"
-echo "This rice has been configured for Arch Linux specifically and most likely will not work on other distributions"
-echo ""
-echo "---Please select an option from the following menu:"
-echo " |"
-echo " |- [1] About"
-echo " |- [2] Proceed with installation"
-echo " |- [3] Exit"
-echo ""
+echo '
+
+          _____                   _____                   _____           
+         /\    \                 /\    \                 /\    \          
+        /%%\    \               /@@\    \               /##\    \         
+       /%%%%\    \             /@@@@\    \             /####\    \        
+      /%%%%%%\    \           /@@@@@@\    \           /######\    \       
+     /%%%/\%%%\    \         /@@@/\@@@\    \         /###/\###\    \      
+    /%%%/  \%%%\    \       /@@@/__\@@@\    \       /###/__\###\    \     
+   /%%%/    \%%%\    \     /@@@@\   \@@@\    \     /####\   \###\    \    
+  /%%%/    / \%%%\    \   /@@@@@@\   \@@@\    \   /######\   \###\    \   
+ /%%%/    /   \%%%\    \ /@@@/\@@@\   \@@@\    \ /###/\###\   \###\    \  
+/%%%/____/     \%%%\____\@@@/  \@@@\   \@@@\____\###/  \###\   \###\____\ 
+\%%%\    \      \%%/    /@@/    \@@@\  /@@@/    /##/   |####\  /###/    / 
+ \%%%\    \      \/____/ \/____/ \@@@\/@@@/    / \/____|#####\/###/    /  
+  \%%%\    \                      \@@@@@@/    /        |#########/    /   
+   \%%%\    \                      \@@@@/    /         |##|\####/    /    
+    \%%%\    \                     /@@@/    /          |##| \##/    /     
+     \%%%\    \                   /@@@/    /           |##|  \/____/	  
+      \%%%\    \                 /@@@/    /            |##|   |           
+       \%%%\____\               /@@@/    /             \##|   |           
+        \%%/    /               \@@/    /               \#|   |           
+         \/____/                 \/____/                 \|___|           
+
+
+Welcome to Caeli'\''s Automatic Rice Installer
+This rice has been configured for Arch Linux specifically and most likely will not work on other distributions
+
+---Please select an option from the following menu:"
+ |"
+ |- [1] About"
+ |- [2] Proceed with installation"
+ |- [3] Exit"
+ '
 while true ; do
 	read -p "> " installType
 	case $installType in
 		1) 
-			echo "This is an installer for an Arch Linux rice developed by the Twitch Streamer CaeliS240."
-			echo "It is a culmination of his first year using linux with custom key binds, color schemes and ui elements based around popular ricing tools."
-			echo "This Project was first started on October 22nd, 2025 in their Digital Logic design lecture."
-			echo "If you want to support them in their goals, have a good laugh on stream or want more art/tools/rices (like this one), please consider supporting them through their tips page on twitch."
-			echo ""
+			cat <<- EOM
+				This is an installer for an Arch Linux rice developed by the Twitch Streamer CaeliS240.
+				It is a culmination of his first year using linux with custom key binds, color schemes and ui elements based around popular ricing tools.
+				This Project was first started on October 22nd, 2025 in their Digital Logic design lecture.
+				If you want to support them in their goals, have a good laugh on stream or want more art/tools/rices (like this one), please consider supporting them through their tips page on twitch.
+							
+			EOM
+
 			read -p "> "
 			;;
 		2)
@@ -52,9 +57,10 @@ while true ; do
 				## mkdir DOTS
 				## cd DOTS
 				## git clone {repo link}
-				./src/set-up/preinstallation.sh
-				./src/set-up/installation.sh
-				./src/set-up/post-installation.sh
+				cd set-up
+				./preinstallation.sh
+				./installation.sh
+				./post-installation.sh
 			fi
 			exit 0
 			;;
