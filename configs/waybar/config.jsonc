@@ -1,30 +1,82 @@
-[{
-	"include": ["module-configs/*.jsonc"],
-	//location 
-	"layer": "top",
-	"output": "eDP-1",
-	"position": "top", 
-	"tooltip": true,
-	
-	//size
-	"spacing": 4, // Gaps between modules (4px)
-	
-	//module locations
-	"modules-left": [
-	  "hyprland/workspaces",
-	  "pulseaudio",
-	  "backlight"
-	],
+{
+  // CORE SETTINGS
+  "layer": "top",
+  "position": "top", 
+  "height": 36,
 
-	"modules-center": [
-	  "network",
-	  "bluetooth"
-	],
+  // MODULES 
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["pulseaudio", "backlight", "cpu", "battery"],
+  "modules-right": ["network", "clock"],
 
-	"modules-right": [
-	  "cpu",
-	  "battery",
-	  "clock"
-	]
+  // WORKSPACES
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "format": "{name}"
+  },
 
-}]
+  // CLOCK
+  "clock": {
+    "timezone": "America/New_York",
+    "format": "{:%I:%M %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "today-format": "<b><u>{}</u></b>",
+      "weeks-pos": "right"
+    }
+  },
+
+  // VOLUME
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-bluetooth": " {volume}%",
+    "format-icons": {
+      "muted": "",
+      "default": ["", "", ""]
+    },
+	"scoll-step": 5,
+	"max-volume": 150
+	},
+
+  // NETWORK (fixed bandwidth args)
+  "network": {
+    "format-wifi": "{icon} {essid} ({signalStrength}%)",
+    "format-ethernet": " Ethernet",
+    "format-disconnected": "󰤯",
+    "format-icons": {
+      "wifi": ["󰤟", "󰤢", "󰤨"],
+      "ethernet": "",
+      "disconnected": "󰤯"
+    },
+    "interval": 2
+  },
+
+  // BACKLIGHT
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃜", "󰃛", "󰃚"]
+  },
+
+  // BATTERY
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-icons": ["󰂃", "󰁺", "󰁾", "󰁹"]
+  },
+
+  "cpu": {
+    "interval": 2,
+    "format": " {usage}%",
+    "tooltip": true,
+    "tooltip-format": "CPU: {usage}%\nModel: {model}"
+  }
+}
+

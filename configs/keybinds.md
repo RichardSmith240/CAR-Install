@@ -2,7 +2,7 @@
 
 ---
 
-## 🪟 Hyprland
+## Hyprland
 
 ### Applications
 - **Super + Enter** → Open terminal  
@@ -59,7 +59,7 @@
 
 ---
 
-## ✏️ Neovim
+## Neovim
 
 ### Tabs
 - **Leader + t n** → New tab  
