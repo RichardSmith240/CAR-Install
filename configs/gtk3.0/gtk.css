@@ -1,0 +1,102 @@
+@define-color car_bg        rgba(27, 1, 38, 0.50);
+@define-color car_fg        #E9DFF2;
+
+@define-color car_surface0  rgba(36, 16, 51, 0.50);
+@define-color car_surface1  rgba(47, 24, 66, 0.50);
+
+@define-color car_inactive  #7D6A9C;
+
+@define-color car_primary   #CE84FD;
+@define-color car_secondary #9A84B8;
+@define-color car_tertiary  #E8A2D5;
+
+@define-color car_error     #C94A4A;
+@define-color car_warning   #E0A43A;
+@define-color car_success   #7FB448;
+
+@define-color window_bg_color        @car_bg;
+@define-color window_fg_color        @car_fg;
+@define-color view_bg_color          @car_surface0;
+@define-color view_fg_color          @car_fg;
+@define-color headerbar_bg_color     @car_surface0;
+@define-color headerbar_fg_color     @car_fg;
+@define-color popover_bg_color       @car_surface1;
+@define-color accent_color           @car_primary;
+@define-color accent_fg_color        #1B0126;
+
+/* windows */
+window {
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+}
+
+headerbar {
+  background-color: @headerbar_bg_color;
+  color: @headerbar_fg_color;
+  box-shadow: none;
+}
+
+/* notebooks and tabs */
+
+notebook > header {
+  background: transparent;
+  padding: 6px;
+}
+
+notebook tab {
+  background: transparent;
+  border-radius: 999px;
+  padding: 6px 14px;
+  margin: 2px;
+  color: @car_inactive;
+}
+
+notebook tab:hover:not(:checked) {
+  background-color: alpha(@accent_color, 0.15);
+  color: @car_fg;
+}
+
+notebook tab:checked {
+  background-color: @accent_color;
+  color: @accent_fg_color;
+}
+
+/* nautilus */
+
+.nautilus-window {
+  background-color: @window_bg_color;
+}
+
+.nautilus-window .sidebar {
+  background-color: @car_surface0;
+}
+
+.nautilus-window row:selected {
+  background-color: alpha(@accent_color, 0.25);
+  border-radius: 8px;
+}
+
+/* sliders */
+
+scale {
+  padding: 6px;
+}
+
+scale trough {
+  min-height: 6px;
+  min-width: 6px;
+  border-radius: 999px;
+  background-color: alpha(@car_surface1, 0.9);
+}
+
+scale highlight {
+  border-radius: 999px;
+  background-color: @accent_color;
+}
+
+scale slider {
+  min-height: 14px;
+  min-width: 14px;
+  border-radius: 999px;
+  background-color: @accent_color;
+}
