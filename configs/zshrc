@@ -1,0 +1,43 @@
+ eval "$(starship init zsh)"
+
+zstyle ':completion:*' completer _complete _ignored _approximate
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' max-errors 2
+zstyle ':completion:*' menu select=0
+zstyle ':completion:*' original true
+zstyle ':completion:*' prompt 'Corrections: %e'
+zstyle ':completion:*' select-prompt Option: %p of %s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:complete:*' gain-privileges 1
+zstyle ':compinstall filename' '/home/ricky/.zshrc'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+
+autoload -Uz compinit
+compinit
+
+export EDITOR=nvim
+export VISUAL=nvim
+
+# history setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=1000
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+setopt inc_append_history
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+
+#yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
